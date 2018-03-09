@@ -39,6 +39,8 @@ public interface PlayerBaseMapper {
 
 	Integer countByParentId(@Param("parentId") String playerid);
 
+
+
 	List<PlayerBase> selectByParentId(@Param("parentId") String parentId);
 	
 	List<PlayerBase> getRobotsByIds(@Param("maxid")int maxid,@Param("minid")int id);
