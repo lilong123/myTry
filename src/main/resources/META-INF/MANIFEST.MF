@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Class-Path: spring-context-4.0.5.RELEASE.jar log4j-1.2.17.jar spring-b
+ eans-4.0.5.RELEASE.jar spring-boot-starter-logging-1.1.3.RELEASE.jar 
+ fastjson-1.2.41.jar tomcat-embed-logging-juli-7.0.54.jar tomcat-embed
+ -el-7.0.54.jar spring-boot-starter-1.1.3.RELEASE.jar netty-all-4.1.17
+ .Final.jar tomcat-juli-7.0.54.jar jackson-core-2.3.3.jar spring-web-4
+ .0.5.RELEASE.jar spring-boot-autoconfigure-1.1.3.RELEASE.jar validati
+ on-api-1.1.0.Final.jar spring-core-4.0.5.RELEASE.jar mybatis-spring-b
+ oot-starter-1.1.1.jar snakeyaml-1.13.jar jboss-logging-3.1.1.GA.jar s
+ lf4j-api-1.7.7.jar classmate-1.0.0.jar tomcat-jdbc-7.0.54.jar spring-
+ boot-starter-tomcat-1.1.3.RELEASE.jar spring-expression-4.0.5.RELEASE
+ .jar spring-tx-4.0.5.RELEASE.jar spring-boot-starter-web-1.1.3.RELEAS
+ E.jar jcl-over-slf4j-1.7.7.jar tomcat-embed-core-7.0.54.jar spring-jd
+ bc-4.0.5.RELEASE.jar spring-aop-4.0.5.RELEASE.jar Java-WebSocket-1.3.
+ 0.jar logback-core-1.1.2.jar mybatis-3.4.0.jar mysql-connector-java-5
+ .1.31.jar spring-boot-starter-jdbc-1.1.3.RELEASE.jar jackson-databind
+ -2.3.3.jar jul-to-slf4j-1.7.7.jar aopalliance-1.0.jar jackson-annotat
+ ions-2.3.3.jar hibernate-validator-5.0.3.Final.jar mybatis-spring-boo
+ t-autoconfigure-1.1.1.jar spring-boot-1.1.3.RELEASE.jar logback-class
+ ic-1.1.2.jar spring-webmvc-4.0.5.RELEASE.jar mybatis-spring-1.3.0.jar
+Main-Class: com.nineShadow.springboot.Application
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nineShadow.dao.RedPackageRoomMapper" >
+  <resultMap id="BaseResultMap" type="com.nineShadow.model.RedPackageRoom" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="room_name" property="roomName" jdbcType="VARCHAR" />
+    <result column="package_nums" property="packageNums" jdbcType="VARCHAR" />
+    <result column="multiples" property="multiples" jdbcType="VARCHAR" />
+    <result column="bomb_nums" property="bombNums" jdbcType="VARCHAR" />
+    <result column="min_money" property="minMoney" jdbcType="INTEGER" />
+    <result column="max_money" property="maxMoney" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, room_name, package_nums, multiples, bomb_nums, min_money, max_money
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from red_package_room
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from red_package_room
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.nineShadow.model.RedPackageRoom"   useGeneratedKeys="true" keyProperty="id">
+    insert into red_package_room (id, room_name, package_nums, 
+      multiples, bomb_nums, min_money, 
+      max_money)
+    values (#{id,jdbcType=INTEGER}, #{roomName,jdbcType=VARCHAR}, #{packageNums,jdbcType=VARCHAR}, 
+      #{multiples,jdbcType=VARCHAR}, #{bombNums,jdbcType=VARCHAR}, #{minMoney,jdbcType=INTEGER}, 
+      #{maxMoney,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.nineShadow.model.RedPackageRoom"   useGeneratedKeys="true" keyProperty="id">
+    insert into red_package_room
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="roomName != null" >
+        room_name,
+      </if>
+      <if test="packageNums != null" >
+        package_nums,
+      </if>
+      <if test="multiples != null" >
+        multiples,
+      </if>
+      <if test="bombNums != null" >
+        bomb_nums,
+      </if>
+      <if test="minMoney != null" >
+        min_money,
+      </if>
+      <if test="maxMoney != null" >
+        max_money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="roomName != null" >
+        #{roomName,jdbcType=VARCHAR},
+      </if>
+      <if test="packageNums != null" >
+        #{packageNums,jdbcType=VARCHAR},
+      </if>
+      <if test="multiples != null" >
+        #{multiples,jdbcType=VARCHAR},
+      </if>
+      <if test="bombNums != null" >
+        #{bombNums,jdbcType=VARCHAR},
+      </if>
+      <if test="minMoney != null" >
+        #{minMoney,jdbcType=INTEGER},
+      </if>
+      <if test="maxMoney != null" >
+        #{maxMoney,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.nineShadow.model.RedPackageRoom" >
+    update red_package_room
+    <set >
+      <if test="roomName != null" >
+        room_name = #{roomName,jdbcType=VARCHAR},
+      </if>
+      <if test="packageNums != null" >
+        package_nums = #{packageNums,jdbcType=VARCHAR},
+      </if>
+      <if test="multiples != null" >
+        multiples = #{multiples,jdbcType=VARCHAR},
+      </if>
+      <if test="bombNums != null" >
+        bomb_nums = #{bombNums,jdbcType=VARCHAR},
+      </if>
+      <if test="minMoney != null" >
+        min_money = #{minMoney,jdbcType=INTEGER},
+      </if>
+      <if test="maxMoney != null" >
+        max_money = #{maxMoney,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.nineShadow.model.RedPackageRoom" >
+    update red_package_room
+    set room_name = #{roomName,jdbcType=VARCHAR},
+      package_nums = #{packageNums,jdbcType=VARCHAR},
+      multiples = #{multiples,jdbcType=VARCHAR},
+      bomb_nums = #{bombNums,jdbcType=VARCHAR},
+      min_money = #{minMoney,jdbcType=INTEGER},
+      max_money = #{maxMoney,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectAll" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from red_package_room
+  </select>
+  
+</mapper>
